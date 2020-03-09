@@ -4,15 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Pick A Restaurant</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+  <title>FindBite</title>
 
   <style>
+    * {
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
     #map {
+      height: 76%;
+      border: solid 2px red;
+    }
+
+    body {
+      background-image: linear-gradient(red, white, red);
+      height: 100%;
+      background-attachment:fixed;
+    }
+
+    html {
       height: 100%;
     }
 
-    body, html {
-      height: 100%
+    h1 {
+      text-align: center;
+      color: white;
+      font-size: 4vw;
+    }
+
+    #searchBar {
+      width: 97%;
+      font-size: 16px;
+      padding: 12px 20px 12px 10px;
+      border: 2px solid red;
+      margin-bottom: 12px;
     }
   </style>
 
@@ -21,13 +48,11 @@
   </script>
 
   <script src="index.js"></script>
-  <!-- <script src="bundle.js"></script> -->
-  <script>
-  </script>
 </head>
 
 <body>
-<div id="map"></div>
-
+  <h1>FindBite: Pick the Perfect Restaurant</h1>
+  <input type="text" id="searchBar" onkeyup="search(event)" placeholder="Search for restaurants...">
+  <div id="map"></div>
 </body>
 </html>
